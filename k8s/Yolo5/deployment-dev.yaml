@@ -24,6 +24,20 @@ spec:
           limits:
             cpu: 500m
             memory: 1000Mi
+        env:
+          - name: yolo5-service
+            value: http://yolo5-service:3000
+          - name: REGION_NAME
+            value: "us-east-2"
+          - name: BUCKET_NAME
+            value: "shantal-awsproject-dev"
+          - name: DYNAMODB_TABLE
+            value: "shantal-dynamoDB-aws-dev"
+          - name: SQS_QUEUE_NAME
+            value: "shantal-queue-aws-dev"
+          - name: ALB_URL #Network load balancer in this case
+            value: "a35eb43ed844242b5b0af4bd1b1219b5-7a6a47f2a25e90e1.elb.us-east-2.amazonaws.com"
+
 
 ---
 apiVersion: v1
@@ -40,11 +54,11 @@ spec:
 
 
 ---
-apiVersion: autoscaling/v2beta2
+apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler # Horizontal Pod Autoscaler (HPA)
 metadata:
   name: yolo5-hpa
-  namespace: default
+  namespace: default  # Changed to "default" or apply to the correct namespace
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
