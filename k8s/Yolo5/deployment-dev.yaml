@@ -70,13 +70,12 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler # Horizontal Pod Autoscaler (HPA)
 metadata:
   name: yolo5-hpa
-  namespace: default  # Changed to "default" or apply to the correct namespace
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
     name: yolo5-hpa  # Match the deployment name
-    namespace: yolo5-namespace  # Add this line to specify the namespace
+    namespace: default  # Add this line to specify the namespace
   minReplicas: 1
   maxReplicas: 10
   metrics:
