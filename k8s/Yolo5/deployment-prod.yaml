@@ -15,7 +15,7 @@ spec:
           app: app-yolo5
     spec:
       containers:
-      - name: server
+      - name: app-yolo5
         image: shantalberkhof/my_yolo5_k8s:v2
         resources:
           requests:
@@ -24,6 +24,8 @@ spec:
           limits:
             cpu: 500m
             memory: 1000Mi
+        ports:
+          - containerPort: 8080
         env:
           - name: yolo5-service
             value: http://yolo5-service:3000
@@ -37,7 +39,6 @@ spec:
             value: "shantal-queue-aws"
           - name: ALB_URL #Network load balancer in this case
             value: "a35eb43ed844242b5b0af4bd1b1219b5-7a6a47f2a25e90e1.elb.us-east-2.amazonaws.com"
-
 
 
 ---

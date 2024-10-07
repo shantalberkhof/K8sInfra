@@ -15,7 +15,7 @@ spec:
           app: app-polybot
     spec:
       containers:
-      - name: server
+      - name: app-polybot
         image: shantalberkhof/my_polybot_k8s:v2
         resources:
           requests:
@@ -24,6 +24,8 @@ spec:
           limits:
             cpu: 500m
             memory: 1000Mi
+        ports:
+          - containerPort: 8443
         env:
           - name: polybot-service
             value: http://polybot-service:8443
