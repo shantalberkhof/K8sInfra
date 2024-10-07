@@ -1,7 +1,16 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: yolo5-dev  # Define the namespace where your resources will run
+
+---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: app-yolo5
+  namespace: yolo5-dev  # Add this line to specify the namespace
   labels:
     app: app-yolo5
 spec:
@@ -46,6 +55,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: yolo5-service # The DNS address to yolo5 pod
+  namespace: yolo5-dev  # Add this line to specify the namespace
 spec:
   selector:
     app: app-yolo5 # This is the name of the label (match the label in the deployment)
@@ -65,7 +75,8 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: app-yolo5  # Match the deployment name
+    name: yolo5-hpa  # Match the deployment name
+    namespace: yolo5-namespace  # Add this line to specify the namespace
   minReplicas: 1
   maxReplicas: 10
   metrics:

@@ -32,7 +32,7 @@ spec:
           - name: REGION_NAME
             value: "us-east-2"
           - name: BUCKET_NAME
-            value: "shantal-dynamoDB-aws"
+            value: "shantal-awsproject"
           - name: DYNAMODB_TABLE
             value: "shantal-dynamoDB-aws"
           - name: SQS_QUEUE_NAME
