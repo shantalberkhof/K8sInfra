@@ -32,7 +32,13 @@ spec:
           - name: REGION_NAME
             value: "us-east-2"
           - name: DYNAMODB_TABLE
-            value: "shantal-dynamoDB-aws"
+            value: "shantal-dynamoDB-aws-dev"
+          - name: BUCKET_NAME
+            value: "shantal-awsproject-dev"
+          - name: TELEGRAM_APP_URL
+            value: "https://bot.domain.shantal.k8s.int-devops.click"
+          - name: TELEGRAM_TOKEN_NAME
+            value: "shantal-telegram-bot-token"
 
 ---
 apiVersion: v1
