@@ -16,4 +16,4 @@ spec:
               service:
                 name: polybot
                 port:
-                  number: 8080
+                  number: 8443
