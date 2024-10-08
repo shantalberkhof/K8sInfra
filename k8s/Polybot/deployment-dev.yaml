@@ -17,6 +17,7 @@ spec:
       containers:
       - name: app-polybot
         image: shantalberkhof/my_polybot_k8s_dev:v2
+        imagePullPolicy: "Always"
         resources:
           requests:
             cpu: 200m

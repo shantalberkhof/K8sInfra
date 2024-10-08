@@ -26,6 +26,7 @@ spec:
       containers:
       - name: app-yolo5
         image: shantalberkhof/my_yolo5_k8s_dev:v2
+        imagePullPolicy: "Always"
         resources:
           requests:
             cpu: 200m
