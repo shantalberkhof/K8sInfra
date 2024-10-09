@@ -34,6 +34,8 @@ spec:
             value: "us-east-2"
           - name: DYNAMODB_TABLE
             value: "shantal-dynamoDB-aws-dev"
+          - name: SQS_QUEUE_NAME
+            value: "https://sqs.us-east-2.amazonaws.com/019273956931/shantal-queue-aws"
           - name: BUCKET_NAME
             value: "shantal-awsproject-dev"
           - name: TELEGRAM_APP_URL
