@@ -27,8 +27,8 @@ spec:
         ports:
           - containerPort: 8080
         env:
-          - name: yolo5-service
-            value: http://yolo5-service:3000
+#          - name: yolo5-service
+#            value: http://yolo5-service:3000
           - name: REGION_NAME
             value: "us-east-2"
           - name: BUCKET_NAME
