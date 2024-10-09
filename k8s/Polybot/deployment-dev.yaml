@@ -42,7 +42,8 @@ spec:
             value: "https://bot.domain.shantal.k8s.int-devops.click"
           - name: TELEGRAM_TOKEN_NAME
             value: "shantal-telegram-bot-token-dev"
-
+          - name: ALB_URL #Network load balancer in this case
+            value: "a35eb43ed844242b5b0af4bd1b1219b5-7a6a47f2a25e90e1.elb.us-east-2.amazonaws.com"
 
 
 
