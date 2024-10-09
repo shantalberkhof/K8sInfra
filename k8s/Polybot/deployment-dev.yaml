@@ -41,7 +41,7 @@ spec:
           - name: TELEGRAM_APP_URL
             value: "https://bot.domain.shantal.k8s.int-devops.click"
           - name: TELEGRAM_TOKEN_NAME
-            value: "shantal-telegram-bot-token_dev"
+            value: "shantal-telegram-bot-token-dev"
 
 
 
