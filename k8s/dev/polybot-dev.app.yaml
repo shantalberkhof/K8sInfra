@@ -1,17 +1,18 @@
+# App for argoCD
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: polybot-dev
   namespace: argocd
 spec:
-  destination:
-    namespace: dev
-    server: https://kubernetes.default.svc
+  project: default
   source:
     repoURL: 'https://github.com/shantalberkhof/K8sInfra.git'
     targetRevision: dev
-    path: 'K8sInfra/k8s/Polybot'
-  project: default
+    path: k8s/dev            # Correct path for Polybot manifests
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: dev               # Syncing to 'dev' namespace
   syncPolicy:
     automated:
       prune: true

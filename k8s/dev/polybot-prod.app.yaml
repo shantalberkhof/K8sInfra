@@ -1,20 +1,18 @@
+# k8s/polybot-prod-app.yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: yolo5-dev
+  name: polybot-prod
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/your-repo/K8sInfra.git'
-    targetRevision: HEAD
-    path: k8s/Yolo5
-    helm:
-      valueFiles:
-        - values-dev.yaml
+    repoURL: 'https://github.com/shantalberkhof/K8sInfra.git'
+    targetRevision: main
+    path: k8s/prod
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: dev
+    namespace: prod
   syncPolicy:
     automated:
       prune: true

@@ -6,15 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/your-repo/K8sInfra.git'
-    targetRevision: HEAD
-    path: k8s/Yolo5
-    helm:
-      valueFiles:
-        - values-prod.yaml
+    repoURL: 'https://github.com/shantalberkhof/K8sInfra.git'
+    targetRevision: main         # Points to main branch for Prod
+    path: k8s/prod
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: prod
+    namespace: prod              # Syncing to the 'prod' namespace
   syncPolicy:
     automated:
       prune: true
