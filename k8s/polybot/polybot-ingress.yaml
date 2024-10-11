@@ -7,7 +7,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: bot.domain.shantal.k8s.int-devops.click  # Replace with your subdomain
+    - host: bot.domain.shantal.k8s.dev.int-devops.click  # Replace with your subdomain
       http:
         paths:
           - path: /
