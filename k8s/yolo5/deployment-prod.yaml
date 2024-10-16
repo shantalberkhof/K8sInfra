@@ -12,8 +12,8 @@ spec:
       app: app-yolo5
   template:
     metadata:
-        labels:
-          app: app-yolo5
+      labels:
+        app: app-yolo5
     spec:
       containers:
       - name: app-yolo5
@@ -59,7 +59,8 @@ spec:
 
 
 ---
-apiVersion: autoscaling/v2beta2
+#apiVersion: autoscaling/v2beta2
+apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler # Horizontal Pod Autoscaler (HPA)
 metadata:
   name: yolo5-hpa
