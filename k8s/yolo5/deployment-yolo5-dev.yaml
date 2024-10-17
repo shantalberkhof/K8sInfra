@@ -54,8 +54,8 @@ spec:
     app: app-yolo5 # This is the name of the label (match the label in the deployment)
   ports:
     - protocol: TCP
-      port: 3000
-      targetPort: 3000
+      port: 8080 # Edit from 3000
+      targetPort: 8080
 
 ---
 
