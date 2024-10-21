@@ -40,7 +40,7 @@ spec:
           - name: SQS_QUEUE_NAME
             value: "shantal-queue-aws-dev"
           - name: ALB_URL #Network load balancer in this case
-            value: "a27540a9f786c44818f1a2bff39d3ee8-499d87062077720f.elb.us-east-2.amazonaws.com"
+            value: "a08e794fe1fad4bf59f23aa4f36a5b96-037b5809b1deba3c.elb.us-east-2.amazonaws.com"
 
 ---
 
