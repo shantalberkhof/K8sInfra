@@ -42,21 +42,19 @@ spec:
           - name: ALB_URL #Network load balancer in this case
             value: "app-polybot"
 
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: yolo5-service # The DNS address to yolo5 pod
-  namespace: prod  # Specify the namespace
-spec:
-  selector:
-    app: app-yolo5 # This is the name of the label (match the label in the deployment)
-  ports:
-    - protocol: TCP
-      port: 3000
-      targetPort: 3000
-
+#---
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  name: yolo5-service # The DNS address to yolo5 pod
+#  namespace: prod  # Specify the namespace
+#spec:
+#  selector:
+#    app: app-yolo5 # This is the name of the label (match the label in the deployment)
+#  ports:
+#    - protocol: TCP
+#      port: 3000
+#      targetPort: 3000
 
 ---
 #apiVersion: autoscaling/v2beta2
