@@ -27,7 +27,7 @@ spec:
             cpu: 500m
             memory: 1000Mi
         ports:
-          - containerPort: 8443
+          - containerPort: 8081
         env:
 #          - name: yolo5-service
 #            value: http://yolo5-service:3000
