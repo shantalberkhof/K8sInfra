@@ -40,7 +40,7 @@ spec:
           - name: SQS_QUEUE_NAME
             value: "shantal-queue-aws"
           - name: ALB_URL #Network load balancer in this case
-            value: "app-polybot"
+            value: "polybot-service"
 
 #---
 #apiVersion: v1
